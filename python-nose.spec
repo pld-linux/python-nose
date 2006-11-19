@@ -1,15 +1,16 @@
-# $Revision: 1.2 $
+# $Revision: 1.3 $
 %define     module  nose
 %define     python_version 2.4
 Summary:	A unittest extension offering automatic test suite discovery, simplified test authoring, and output capture
 Name:		python-%{module}
 Version:	0.9.1
-Release:	0.2
+Release:	0.3
 License:	LGPL
 Group:		Libraries
 Source0:    http://somethingaboutorange.com/mrl/projects/%{module}/%{module}-%{version}.tar.gz
 URL:		http://somethingaboutorange.com/mrl/projects/nose/
 Requires:   python >= %{python_version}
+Requires:   python-devel-tools
 BuildArch:  noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
