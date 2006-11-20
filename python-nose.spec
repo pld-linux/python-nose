@@ -1,6 +1,6 @@
-# $Revision: 1.5 $
+# $Revision: 1.6 $
 %define		module	nose
-%define     python_version 2.4
+%define     python_version 2.5
 Summary:	A unittest extension with automatic discovery, simplified authoring, and output capture
 Summary(pl):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyj±cia
 Name:		python-%{module}
