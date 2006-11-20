@@ -1,4 +1,4 @@
-# $Revision: 1.5 $
+# $Revision: 1.5.2.1 $
 %define		module	nose
 %define     python_version 2.4
 Summary:	A unittest extension with automatic discovery, simplified authoring, and output capture
@@ -14,6 +14,7 @@ URL:		http://somethingaboutorange.com/mrl/projects/nose/
 BuildRequires:	python >= %{python_version}
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-devel-tools
+Requires:   python-setuptools
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
