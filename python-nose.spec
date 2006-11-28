@@ -1,6 +1,5 @@
-# $Revision: 1.6 $
+# $Revision: 1.7 $
 %define		module	nose
-%define     python_version 2.5
 Summary:	A unittest extension with automatic discovery, simplified authoring, and output capture
 Summary(pl):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyj±cia
 Name:		python-%{module}
@@ -11,7 +10,7 @@ Group:		Libraries/Python
 Source0:	http://somethingaboutorange.com/mrl/projects/nose/%{module}-%{version}.tar.gz
 # Source0-md5:	97771e186ff3680e1abe5566a939966c
 URL:		http://somethingaboutorange.com/mrl/projects/nose/
-BuildRequires:	python >= %{python_version}
+BuildRequires:	python >= 1:2.5
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-devel-tools
 BuildArch:	noarch
@@ -55,4 +54,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/nosetests
 %{py_sitescriptdir}/%{module}
-%{py_sitescriptdir}/%{module}-%{version}-py%{python_version}.egg-info
+%{py_sitescriptdir}/%{module}-%{version}-py*.egg-info
