@@ -1,7 +1,7 @@
-# $Revision: 1.7 $
+# $Revision: 1.8 $
 %define		module	nose
 Summary:	A unittest extension with automatic discovery, simplified authoring, and output capture
-Summary(pl):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyj±cia
+Summary(pl.UTF-8):   Rozszerzenie testÃ³w jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjÄ…cia
 Name:		python-%{module}
 Version:	0.9.1
 Release:	0.4
@@ -24,13 +24,13 @@ nose will run tests in files or directories under the current working
 directory whose names include "test". nose also supports doctest tests
 and may optionally provide a test coverage report.
 
-%description -l pl
-nose dostarcza alternatywny proces wykrywania i uruchamiania testów
-dla testów jednostkowych (unittest), maj±cy przypominaæ zachowanie
-py.test na ile to mo¿liwe bez uciekania siê do magii. Domy¶lnie nose
-uruchamia testy z tych plików lub katalogów od bie¿±cego katalogu,
-których nazwa zawiera "test". Obs³uguje tak¿e testy doctest i
-opcjonalnie przedstawia raport pokrycia testów.
+%description -l pl.UTF-8
+nose dostarcza alternatywny proces wykrywania i uruchamiania testÃ³w
+dla testÃ³w jednostkowych (unittest), majÄ…cy przypominaÄ‡ zachowanie
+py.test na ile to moÅ¼liwe bez uciekania siÄ™ do magii. DomyÅ›lnie nose
+uruchamia testy z tych plikÃ³w lub katalogÃ³w od bieÅ¼Ä…cego katalogu,
+ktÃ³rych nazwa zawiera "test". ObsÅ‚uguje takÅ¼e testy doctest i
+opcjonalnie przedstawia raport pokrycia testÃ³w.
 
 %prep
 %setup -qn %{module}-%{version}
