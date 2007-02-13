@@ -1,7 +1,7 @@
-# $Revision: 1.8 $
+# $Revision: 1.9 $
 %define		module	nose
 Summary:	A unittest extension with automatic discovery, simplified authoring, and output capture
-Summary(pl.UTF-8):   Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjącia
+Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjącia
 Name:		python-%{module}
 Version:	0.9.1
 Release:	0.4
