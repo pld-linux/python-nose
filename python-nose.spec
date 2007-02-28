@@ -1,4 +1,4 @@
-# $Revision: 1.10 $
+# $Revision: 1.11 $
 %define		module	nose
 Summary:	A unittest extension with automatic discovery, simplified authoring, and output capture
 Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjącia
@@ -46,6 +46,7 @@ python setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
+mv $RPM_BUILD_ROOT%{_prefix}/man/man{2,1}
 mv $RPM_BUILD_ROOT%{_prefix}/man/ $RPM_BUILD_ROOT%{_datadir}
 
 %py_postclean
@@ -58,4 +59,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/nosetests
 %{py_sitescriptdir}/%{module}
 %{py_sitescriptdir}/%{module}-%{version}-py*.egg-info
-%{_mandir}/man2/*
+%{_mandir}/man1/*
