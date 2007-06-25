@@ -1,14 +1,14 @@
-# $Revision: 1.11 $
+# $Revision: 1.12 $
 %define		module	nose
 Summary:	A unittest extension with automatic discovery, simplified authoring, and output capture
 Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjącia
 Name:		python-%{module}
-Version:	0.9.2
+Version:	0.9.3
 Release:	1
 License:	LGPL
 Group:		Libraries/Python
 Source0:	http://somethingaboutorange.com/mrl/projects/nose/%{module}-%{version}.tar.gz
-# Source0-md5:	d6c78e37b5a5a671e79b00784233dc63
+# Source0-md5:	fc83ca1861afb598e5634f83dbe045ec
 URL:		http://somethingaboutorange.com/mrl/projects/nose/
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-setuptools >= 0.6-0.c5
@@ -46,7 +46,6 @@ python setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
-mv $RPM_BUILD_ROOT%{_prefix}/man/man{2,1}
 mv $RPM_BUILD_ROOT%{_prefix}/man/ $RPM_BUILD_ROOT%{_datadir}
 
 %py_postclean
