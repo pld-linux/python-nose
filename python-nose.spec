@@ -9,7 +9,7 @@ Group:		Libraries/Python
 Source0:	http://somethingaboutorange.com/mrl/projects/nose/%{module}-%{version}.tar.gz
 # Source0-md5:	fc83ca1861afb598e5634f83dbe045ec
 URL:		http://somethingaboutorange.com/mrl/projects/nose/
-BuildRequires:	python >= 1:2.5
+BuildRequires:	python-devel-tools >= 1:2.5
 BuildRequires:	python-setuptools >= 0.6-0.c5
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-devel-tools
