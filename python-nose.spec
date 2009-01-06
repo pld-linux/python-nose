@@ -2,12 +2,12 @@
 Summary:	A unittest extension with automatic discovery, simplified authoring, and output capture
 Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjścia
 Name:		python-%{module}
-Version:	0.9.3
-Release:	3
+Version:	0.10.4
+Release:	1
 License:	LGPL
 Group:		Libraries/Python
 Source0:	http://somethingaboutorange.com/mrl/projects/nose/%{module}-%{version}.tar.gz
-# Source0-md5:	fc83ca1861afb598e5634f83dbe045ec
+# Source0-md5:	4b4aec226d03f1d8465336a88d7183c4
 URL:		http://somethingaboutorange.com/mrl/projects/nose/
 BuildRequires:	python-devel-tools >= 1:2.5
 BuildRequires:	python-setuptools >= 0.6-0.c5
