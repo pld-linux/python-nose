@@ -9,6 +9,7 @@ Group:		Libraries/Python
 Source0:	http://somethingaboutorange.com/mrl/projects/nose/%{module}-%{version}.tar.gz
 # Source0-md5:	00789d016f81ec52f666f020c644447e
 URL:		http://somethingaboutorange.com/mrl/projects/nose/
+BuildRequires:	python-devel
 BuildRequires:	python-devel-tools >= 1:2.5
 BuildRequires:	python-setuptools >= 0.6-0.c5
 BuildRequires:	rpm-pythonprov
@@ -37,7 +38,7 @@ opcjonalnie przedstawia raport pokrycia testów.
 
 %build
 python setup.py build
-	
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
