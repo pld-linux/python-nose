@@ -3,7 +3,7 @@ Summary:	A unittest extension with automatic discovery, simplified authoring, an
 Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjścia
 Name:		python-%{module}
 Version:	1.0.0
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/n/%{module}/%{module}-%{version}.tar.gz
@@ -88,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n python3-%{module}
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/nosetests-3.2
+%attr(755,root,root) %{_bindir}/nosetests-3.?
 %{py3_sitescriptdir}/%{module}
 %{py3_sitescriptdir}/%{module}-%{version}-py*.egg-info
 %{_mandir}/man1/*
