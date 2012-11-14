@@ -3,7 +3,7 @@ Summary:	A unittest extension with automatic discovery, simplified authoring, an
 Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjścia
 Name:		python-%{module}
 Version:	1.0.0
-Release:	3
+Release:	4
 License:	LGPL
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/n/%{module}/%{module}-%{version}.tar.gz
@@ -49,6 +49,8 @@ much as is reasonably possible without resorting to magic. By default,
 nose will run tests in files or directories under the current working
 directory whose names include "test". nose also supports doctest tests
 and may optionally provide a test coverage report.
+
+%define	_duplicate_files_terminate_build	0
 
 %prep
 %setup -qn %{module}-%{version}
