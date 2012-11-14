@@ -3,7 +3,7 @@ Summary:	A unittest extension with automatic discovery, simplified authoring, an
 Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjścia
 Name:		python-%{module}
 Version:	1.0.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/n/%{module}/%{module}-%{version}.tar.gz
