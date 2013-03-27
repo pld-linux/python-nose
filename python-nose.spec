@@ -2,12 +2,12 @@
 Summary:	A unittest extension with automatic discovery, simplified authoring, and output capture
 Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjścia
 Name:		python-%{module}
-Version:	1.0.0
-Release:	4
+Version:	1.2.1
+Release:	1
 License:	LGPL
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/n/%{module}/%{module}-%{version}.tar.gz
-# Source0-md5:	47a4784c817afa6ef11a505b574584ed
+# Source0-md5:	735e3f1ce8b07e70ee1b742a8a53585a
 URL:		http://pypi.python.org/pypi/nose
 BuildRequires:	python-devel
 BuildRequires:	python-devel-tools >= 1:2.5
