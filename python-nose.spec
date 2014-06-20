@@ -2,13 +2,13 @@
 Summary:	A unittest extension with automatic discovery, simplified authoring, and output capture
 Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjścia
 Name:		python-%{module}
-Version:	1.3.0
+Version:	1.3.3
 Release:	1
 License:	LGPL v2.1
 Group:		Libraries/Python
-Source0:	http://pypi.python.org/packages/source/n/nose/%{module}-%{version}.tar.gz
-# Source0-md5:	95d6d32b9d6b029c3c65674bd9e7eabe
-URL:		http://pypi.python.org/pypi/nose
+Source0:	https://pypi.python.org/packages/source/n/nose/%{module}-%{version}.tar.gz
+# Source0-md5:	42776061bf5206670cb819176dc78654
+URL:		https://pypi.python.org/pypi/nose
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-devel-tools >= 1:2.5
 BuildRequires:	python-setuptools >= 0.6-0.c5
