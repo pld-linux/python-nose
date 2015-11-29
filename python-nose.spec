@@ -9,6 +9,7 @@ Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/n/nose/%{module}-%{version}.tar.gz
 # Source0-md5:	0ca546d81ca8309080fc80cb389e7a16
 URL:		https://pypi.python.org/pypi/nose
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-devel-tools >= 1:2.5
 BuildRequires:	python-setuptools >= 0.6-0.c5
