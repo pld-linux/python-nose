@@ -30,7 +30,7 @@ BuildRequires:	python3-setuptools
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with tests}
-BuildRequires:	sphinx-pdg >= 1.0
+BuildRequires:	sphinx-pdg-2 >= 1.0
 %endif
 Requires:	python-devel-tools >= 1:2.5
 BuildArch:	noarch
@@ -119,7 +119,9 @@ cd ..
 %endif
 
 %if %{with doc}
-%{__make} -C doc html
+# force python 2: sources are in python2 syntax (2to3 would be required for sphinx-build-3)
+%{__make} -C doc html \
+	SPHINXBUILD=sphinx-build-2
 %endif
 
 %install
