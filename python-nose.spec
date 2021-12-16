@@ -20,7 +20,7 @@ URL:		https://pypi.org/project/nose/
 %if %{with python2}
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-devel-tools >= 1:2.5
-BuildRequires:	python-setuptools >= 0.6-0.c5
+BuildRequires:	python-setuptools >= 1:0.6-0.c5
 %endif
 %if %{with python3}
 BuildRequires:	python3-2to3 >= 1:3.2
