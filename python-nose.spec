@@ -10,7 +10,7 @@ Summary:	A unittest extension with automatic discovery, simplified authoring, an
 Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjścia
 Name:		python-%{module}
 Version:	1.3.7
-Release:	7
+Release:	8
 License:	LGPL v2.1
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/nose/
