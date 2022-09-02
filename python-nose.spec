@@ -29,6 +29,7 @@ BuildRequires:	python3-setuptools
 %endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
+BuildRequires:	sed >= 4.0
 %if %{with tests}
 BuildRequires:	sphinx-pdg-2 >= 1.0
 %endif
@@ -88,6 +89,9 @@ Dokumentacja użytkowa i API modułu Pythona nose.
 %prep
 %setup -qn %{module}-%{version}
 
+# no longer supported by python3-setuptools
+%{__sed} -i -e "s/setup3lib/setuptools/;s/'use_2to3': True,//" setup.py
+
 %build
 %if %{with python2}
 %py_build
@@ -102,6 +106,10 @@ cd ..
 %endif
 
 %if %{with python3}
+# 2to3 no longer supported by python3-setuptools
+install -d build-3/lib
+2to3-%{py3_ver} -w -n --no-diffs nose -o build-3/lib/nose
+
 %py3_build
 
 %if %{with tests}
