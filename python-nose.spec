@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	python2	# CPython 2.x module
-%bcond_without	python3	# CPython 3.x module
+%bcond_with	python3	# CPython 3.x module
 %bcond_without	doc	# Sphinx documentation
 %bcond_without	tests	# unit tests
 #
@@ -10,7 +10,7 @@ Summary:	A unittest extension with automatic discovery, simplified authoring, an
 Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjścia
 Name:		python-%{module}
 Version:	1.3.7
-Release:	12
+Release:	13
 License:	LGPL v2.1
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/nose/
