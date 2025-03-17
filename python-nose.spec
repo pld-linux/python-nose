@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	python2	# CPython 2.x module
-%bcond_with	python3	# CPython 3.x module
+%bcond_without	python3	# CPython 3.x module
 %bcond_without	doc	# Sphinx documentation
 %bcond_without	tests	# unit tests
 #
@@ -10,7 +10,7 @@ Summary:	A unittest extension with automatic discovery, simplified authoring, an
 Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjścia
 Name:		python-%{module}
 Version:	1.3.7
-Release:	13
+Release:	14
 License:	LGPL v2.1
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/nose/
@@ -23,7 +23,7 @@ BuildRequires:	python-devel-tools >= 1:2.5
 BuildRequires:	python-setuptools >= 1:0.6-0.c5
 %endif
 %if %{with python3}
-BuildRequires:	python3-2to3 >= 1:3.2
+BuildRequires:	python3-fissix
 BuildRequires:	python3-devel >= 1:3.2
 BuildRequires:	python3-setuptools
 %endif
@@ -106,16 +106,16 @@ cd ..
 %endif
 
 %if %{with python3}
-# 2to3 no longer supported by python3-setuptools
 install -d build-3/lib
-2to3-%{py3_ver} -w -n --no-diffs nose -o build-3/lib/nose
+%{__python3} -m fissix -w -n --no-diffs nose -o build-3/lib/nose
 
 %py3_build
 
-%if %{with tests}
+# imp module needed, deprecated since python 3.4
+%if %{with tests} && 0
 cd build-3
 cp -pr ../unit_tests .
-2to3-%{py3_ver} -w -n --no-diffs unit_tests
+%{__python3} -m fissix -w -n --no-diffs unit_tests
 # as of nose 1.3.7/python 3.7.0 test_xunit fails with:
 # AssertionError: 'test_xunit.mktest.<locals>.TC' != 'test_xunit.TC'
 %{__rm} unit_tests/test_xunit.py
@@ -127,7 +127,6 @@ cd ..
 %endif
 
 %if %{with doc}
-# force python 2: sources are in python2 syntax (2to3 would be required for sphinx-build-3)
 %{__make} -C doc html \
 	SPHINXBUILD=sphinx-build-2
 %endif
