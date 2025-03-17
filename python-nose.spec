@@ -127,6 +127,7 @@ cd ..
 %endif
 
 %if %{with doc}
+# force python 2: sources are in python2 syntax (2to3 would be required for sphinx-build-3)
 %{__make} -C doc html \
 	SPHINXBUILD=sphinx-build-2
 %endif
