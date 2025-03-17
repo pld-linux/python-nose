@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	python2	# CPython 2.x module
-%bcond_without	python3	# CPython 3.x module
+%bcond_with	python3	# CPython 3.x module
 %bcond_without	doc	# Sphinx documentation
 %bcond_without	tests	# unit tests
 #
@@ -10,7 +10,7 @@ Summary:	A unittest extension with automatic discovery, simplified authoring, an
 Summary(pl.UTF-8):	Rozszerzenie testów jednostkowych z automatycznym wykrywaniem, prostym tworzeniem i przechwytywaniem wyjścia
 Name:		python-%{module}
 Version:	1.3.7
-Release:	14
+Release:	15
 License:	LGPL v2.1
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/nose/
@@ -167,7 +167,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS CHANGELOG NEWS README.txt
 %attr(755,root,root) %{_bindir}/nosetests-%{py_ver}
-%attr(755,root,root) %{_bindir}/nosetests
 %{py_sitescriptdir}/%{module}
 %{py_sitescriptdir}/%{module}-%{version}-py*.egg-info
 %{_mandir}/man1/nosetests-%{py_ver}.1*
